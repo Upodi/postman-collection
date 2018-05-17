@@ -1,0 +1,700 @@
+{
+	"info": {
+		"name": "Upodi Api Collection",
+		"_postman_id": "bc0399e9-96c4-c52f-45d5-3d1102ab4662",
+		"description": "Example calls to Upodi's Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Subscription",
+			"description": "Calls related to subscriptions",
+			"item": [
+				{
+					"name": "POST subscription FULL",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"CustomerID\":\"34e2180f-da8c-41b5-9518-85f52847706e\",\"ProductPlanID\":\"f71960d2-8f5b-460b-8eab-5d3f0eee269f\",\"SwitchToPlanID\":null,\"SubscriptionNumber\":\"70RDOG8AX\",\"AutoRenew\":true,\"StartDate\":\"2017-12-05T00:00:00+01:00\",\"EndDate\":\"2018-12-05T00:00:00+01:00\",\"LifeTime\":365,\"InitialTermInterval\":5,\"InitialTermPeriod\":300,\"RenewalTermInterval\":12,\"RenewalTermPeriod\":300,\"LastRenewalDate\":null,\"CancellationDate\":null,\"ActivationDate\":null}"
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/subscriptions",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"subscriptions"
+							]
+						},
+						"description": "Creates a subscription\nNote: Productplans cannot be created through the API, create them on the web platfrom and use it`s ID here, (the id is displayed in the URL)"
+					},
+					"response": []
+				},
+				{
+					"name": "POST subscription Minimum",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"CustomerID\":\"34e2180f-da8c-41b5-9518-85f52847706e\",\"ProductPlanID\":\"f71960d2-8f5b-460b-8eab-5d3f0eee269f\"}"
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/subscriptions",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"subscriptions"
+							]
+						},
+						"description": "Creates a subscription\nNote: Productplans cannot be created through the API, create them on the web platfrom and use it`s ID here, (the id is displayed in the URL)"
+					},
+					"response": []
+				},
+				{
+					"name": "GET all subscriptions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"CustomerID\":\"34e2180f-da8c-41b5-9518-85f52847706e\",\"ProductPlanID\":\"f71960d2-8f5b-460b-8eab-5d3f0eee269f\",\"SwitchToPlanID\":null,\"SubscriptionNumber\":\"70RDOG8AX\",\"AutoRenew\":true,\"StartDate\":\"2017-12-05T00:00:00+01:00\",\"EndDate\":\"2018-12-05T00:00:00+01:00\",\"LifeTime\":365,\"InitialTermInterval\":5,\"InitialTermPeriod\":300,\"RenewalTermInterval\":12,\"RenewalTermPeriod\":300,\"LastRenewalDate\":null,\"CancellationDate\":null,\"ActivationDate\":null}"
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/subscriptions",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"subscriptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET a subscriptions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"CustomerID\":\"34e2180f-da8c-41b5-9518-85f52847706e\",\"ProductPlanID\":\"f71960d2-8f5b-460b-8eab-5d3f0eee269f\",\"SwitchToPlanID\":null,\"SubscriptionNumber\":\"70RDOG8AX\",\"AutoRenew\":true,\"StartDate\":\"2017-12-05T00:00:00+01:00\",\"EndDate\":\"2018-12-05T00:00:00+01:00\",\"LifeTime\":365,\"InitialTermInterval\":5,\"InitialTermPeriod\":300,\"RenewalTermInterval\":12,\"RenewalTermPeriod\":300,\"LastRenewalDate\":null,\"CancellationDate\":null,\"ActivationDate\":null}"
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/subscriptions/{id}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"subscriptions",
+								"{id}"
+							]
+						},
+						"description": "Replace {id} with a valid id"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT activate a subscription",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/subscriptions/:id/activate",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"subscriptions",
+								":id",
+								"activate"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Replace {id} with a valid id"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT expire a subscription",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/subscriptions/:id/expire",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"subscriptions",
+								":id",
+								"expire"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Replace {id} with a valid id"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT cancel a subscription",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/subscriptions/:id/cancel",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"subscriptions",
+								":id",
+								"cancel"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Replace {id} with a valid id"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customers",
+			"description": "Calls related to customers",
+			"item": [
+				{
+					"name": "GET all customers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https://api.upodi.io/v2/customers",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET a customer through id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https://api.upodi.io/v2/customers/:id",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"customers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Replace {id} in call with a valid id"
+					},
+					"response": []
+				},
+				{
+					"name": "GET a customer through account number",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https://api.upodi.io/v2/customers/:accountnumber/accountnumber",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"customers",
+								":accountnumber",
+								"accountnumber"
+							],
+							"variable": [
+								{
+									"key": "accountnumber",
+									"value": "accountNr7000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET a customer through ref key",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https://api.upodi.io/v2/customers/:refkey/refkey",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"customers",
+								":refkey",
+								"refkey"
+							],
+							"variable": [
+								{
+									"key": "refkey",
+									"value": "refKey1000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post a customer Full",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"AccountNumber\":\"accountNr7000\",\"CompanyName\":\"K7VV3EKEAB73TOXC8KWHYSDU7PQSTY8QJQ3TLYF56N\",\"CompanyVAT\":\"5YBI0XJPKXXF14BXOY2VLCQUDV\",\"FullName\":\"1KF0LKBH56\",\"RefKey\":\"refKey1000\",\"PrimaryEmail\":\"D1G3IRFFSSFF6M@0XF0H8.MC\",\"CurrencyCode\":\"EUR\",\"AutoBill\":true,\"PaymentMethod\":null,\"HomePhone\":\"X82TPRJOTHS4OWOBUM0DS6J\",\"BusinessPhone\":\"LBEKUIGPDOVSNWDB61NEM5JT\",\"MobilePhone\":\"FOUW861YMHNN93KAD09\",\"AddressLine1\":\"6Y8IZG\",\"AddressLine2\":\"SECQ2V8O4W3FR44AO0Y77DEIEJRPRPL62GITJ\",\"City\":\"U1APPOKVRHBYUSBJ2OA4LTDS7PK6NLVK0WF66SX\",\"PostalCode\":\"7S1KO253\",\"Country\":\"SN3TPPBYSRADOIGW177NENJ1K6313EETRB4\",\"County\":\"11KHDHNBXWTJVYW58Q0FDCITWK5OMQWNOI4AW\",\"State\":\"J79IEYMTGFRJVAKZ3ZS1V2M9YG9G5M\",\"ParentID\":null,\"BillToParent\":false,\"Note\":\"YJJH5G7 VHCE19D8XC1QFT7FSV W 1H06M7AO6TU 2 WU0ZCWLPEG 0FOD2JGLA7 PLPCDU3WGRPVKX49  ZLCT8Z2ZKEJNZ2DWEOJAT4YUASKWDT NJMNV99Q3MRJYN650R1TQ09T80VTQOFV4H8DNPU0I S0CU HH0X\",\"PaymentTerm\":0,\"Currency\":null,\"Subscriptions\":[],\"Invoices\":[],\"SubscriptionCharges\":[],\"Transactions\":[],\"Parent\":null,\"Contacts\":[],\"Activities\":[],\"CreatedBy\":\"00000000-0000-0000-0001-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0001-000000000000\",\"CreatedByUser\":null,\"ModifiedByUser\":null,\"ID\":\"1ecf6ef8-b813-4032-af20-cb173ec67a84\",\"CreatedDate\":\"2017-12-05T10:45:38.421948Z\",\"ModifiedDate\":\"2017-12-05T10:45:38.421948Z\"}"
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/customers",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post a customer Minimum",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"FullName\":\"1KF0LKBH56\" }"
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/customers",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE a customer",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/customers/:id",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"customers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Replace {id} in call with a valid id"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PaymentMethods",
+			"description": "Contains calls related to payment methods",
+			"item": [
+				{
+					"name": "POST creditcard",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "NjA3MGRiOWItY2ZmMS00Y2RjLWJkNzMtNjEyNmE3ZWY3MWZl",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"number\":\"4111111111111111\",\"expiration\":\"12/2018\",\"cvc\":123}"
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/creditcard",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"creditcard"
+							]
+						},
+						"description": "Creates a creditcard in our system, returns a creditcard token used when adding a payment method"
+					},
+					"response": []
+				},
+				{
+					"name": "POST payment method",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"Type\":8,\"MakeDefault\":\"false\",\"CreditCard\":{\"cardtoken\":\"card_fahmGNyxOqjQM14Z\"}}"
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/paymentmethods/e6cf7805-2c25-44a2-8422-7ec2ec6f196d",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"paymentmethods",
+								"e6cf7805-2c25-44a2-8422-7ec2ec6f196d"
+							]
+						},
+						"description": "Replace {id} with a valid customerId"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
