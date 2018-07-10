@@ -1,10 +1,9 @@
 {
-	"variables": [],
 	"info": {
+		"_postman_id": "8931db6a-7f7b-4901-b948-85e07103a131",
 		"name": "Upodi Api Collection",
-		"_postman_id": "ebc12677-82c2-15c5-90dd-6924c8140f2d",
 		"description": "Example calls to Upodi's Api",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -14,54 +13,6 @@
 				{
 					"name": "GET all customers",
 					"request": {
-						"url": "https://api.upodi.io/v2/customers/",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
-							}
-						],
-						"body": {},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "GET a customer through id",
-					"request": {
-						"url": {
-							"raw": "https://api.upodi.io/v2/customers/:id",
-							"protocol": "https",
-							"host": [
-								"api",
-								"upodi",
-								"io"
-							],
-							"path": [
-								"v2",
-								"customers",
-								":id"
-							],
-							"query": [],
-							"variable": [
-								{
-									"key": "id",
-									"value": ""
-								}
-							]
-						},
 						"method": "GET",
 						"header": [
 							{
@@ -81,6 +32,65 @@
 							"mode": "raw",
 							"raw": ""
 						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/customers/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"customers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET a customer through id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/customers/:id",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"customers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
 						"description": "Replace {id} in call with a valid id"
 					},
 					"response": []
@@ -88,6 +98,25 @@
 				{
 					"name": "GET a customer through account number",
 					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/customers/:accountnumber/accountnumber",
 							"protocol": "https",
@@ -102,14 +131,19 @@
 								":accountnumber",
 								"accountnumber"
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "accountnumber",
 									"value": "accountNr7000"
 								}
 							]
-						},
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET a customer through ref key",
+					"request": {
 						"method": "GET",
 						"header": [
 							{
@@ -129,13 +163,6 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "GET a customer through ref key",
-					"request": {
 						"url": {
 							"raw": "https://api.upodi.io/v2/customers/:refkey/refkey",
 							"protocol": "https",
@@ -150,14 +177,19 @@
 								":refkey",
 								"refkey"
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "refkey",
 									"value": "refKey1000"
 								}
 							]
-						},
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET a customers payment method through id",
+					"request": {
 						"method": "GET",
 						"header": [
 							{
@@ -177,13 +209,6 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "GET a customers payment method through id",
-					"request": {
 						"url": {
 							"raw": "https://api.upodi.io/v2/customers/:id/paymentmethods",
 							"protocol": "https",
@@ -198,40 +223,38 @@
 								":id",
 								"paymentmethods"
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "id",
 									"value": ""
 								}
 							]
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
-							}
-						],
-						"body": {},
-						"description": ""
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "GET a customers invoices through id",
 					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/customers/:id/invoices",
 							"protocol": "https",
@@ -246,40 +269,38 @@
 								":id",
 								"invoices"
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "id",
 									"value": ""
 								}
 							]
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
-							}
-						],
-						"body": {},
-						"description": ""
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Validate customers payment method by paymentmethod id",
 					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/customers/:paymentMethodId/validatepaymentmethod/",
 							"protocol": "https",
@@ -295,41 +316,19 @@
 								"validatepaymentmethod",
 								""
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "paymentMethodId",
 									"value": ""
 								}
 							]
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
-							}
-						],
-						"body": {},
-						"description": ""
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Post a customer Full",
 					"request": {
-						"url": "https://api.upodi.io/v2/customers",
 						"method": "POST",
 						"header": [
 							{
@@ -349,14 +348,25 @@
 							"mode": "raw",
 							"raw": "{\"AccountNumber\":\"accountNr7000\",\"CompanyName\":\"K7VV3EKEAB73TOXC8KWHYSDU7PQSTY8QJQ3TLYF56N\",\"CompanyVAT\":\"5YBI0XJPKXXF14BXOY2VLCQUDV\",\"FullName\":\"1KF0LKBH56\",\"RefKey\":\"refKey1000\",\"PrimaryEmail\":\"D1G3IRFFSSFF6M@0XF0H8.MC\",\"CurrencyCode\":\"EUR\",\"AutoBill\":true,\"PaymentMethod\":null,\"HomePhone\":\"X82TPRJOTHS4OWOBUM0DS6J\",\"BusinessPhone\":\"LBEKUIGPDOVSNWDB61NEM5JT\",\"MobilePhone\":\"FOUW861YMHNN93KAD09\",\"AddressLine1\":\"6Y8IZG\",\"AddressLine2\":\"SECQ2V8O4W3FR44AO0Y77DEIEJRPRPL62GITJ\",\"City\":\"U1APPOKVRHBYUSBJ2OA4LTDS7PK6NLVK0WF66SX\",\"PostalCode\":\"7S1KO253\",\"Country\":\"SN3TPPBYSRADOIGW177NENJ1K6313EETRB4\",\"County\":\"11KHDHNBXWTJVYW58Q0FDCITWK5OMQWNOI4AW\",\"State\":\"J79IEYMTGFRJVAKZ3ZS1V2M9YG9G5M\",\"ParentID\":null,\"BillToParent\":false,\"Note\":\"YJJH5G7 VHCE19D8XC1QFT7FSV W 1H06M7AO6TU 2 WU0ZCWLPEG 0FOD2JGLA7 PLPCDU3WGRPVKX49  ZLCT8Z2ZKEJNZ2DWEOJAT4YUASKWDT NJMNV99Q3MRJYN650R1TQ09T80VTQOFV4H8DNPU0I S0CU HH0X\",\"PaymentTerm\":0,\"Currency\":null,\"Subscriptions\":[],\"Invoices\":[],\"SubscriptionCharges\":[],\"Transactions\":[],\"Parent\":null,\"Contacts\":[],\"Activities\":[],\"CreatedBy\":\"00000000-0000-0000-0001-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0001-000000000000\",\"CreatedByUser\":null,\"ModifiedByUser\":null,\"ID\":\"1ecf6ef8-b813-4032-af20-cb173ec67a84\",\"CreatedDate\":\"2017-12-05T10:45:38.421948Z\",\"ModifiedDate\":\"2017-12-05T10:45:38.421948Z\"}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://api.upodi.io/v2/customers",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"customers"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Post a customer Minimum",
 					"request": {
-						"url": "https://api.upodi.io/v2/customers",
 						"method": "POST",
 						"header": [
 							{
@@ -376,15 +386,8 @@
 							"mode": "raw",
 							"raw": "{ \"FullName\":\"1KF0LKBH56\" }"
 						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "DELETE a customer",
-					"request": {
 						"url": {
-							"raw": "https://api.upodi.io/v2/customers/:id",
+							"raw": "https://api.upodi.io/v2/customers",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -393,17 +396,15 @@
 							],
 							"path": [
 								"v2",
-								"customers",
-								":id"
-							],
-							"query": [],
-							"variable": [
-								{
-									"key": "id",
-									"value": ""
-								}
+								"customers"
 							]
-						},
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE a customer",
+					"request": {
 						"method": "DELETE",
 						"header": [
 							{
@@ -423,6 +424,26 @@
 							"mode": "raw",
 							"raw": ""
 						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/customers/:id",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"customers",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
 						"description": "Replace {id} in call with a valid id"
 					},
 					"response": []
@@ -430,28 +451,37 @@
 				{
 					"name": "PUT and update a customer",
 					"request": {
-						"url": "https://api.upodi.io/v2/customers",
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
+								"value": "bearer X"
 							},
 							{
 								"key": "Accept",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/customers",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"customers"
+							]
 						},
 						"description": "PUT a customer"
 					},
@@ -460,6 +490,25 @@
 				{
 					"name": "PUT a creditcard token onto a customer",
 					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"token\" : \"token\", \r\n  \"makedefault\" : \"true\"\r\n}"
+						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/customers/:id/assigncardtoken/",
 							"protocol": "https",
@@ -475,35 +524,12 @@
 								"assigncardtoken",
 								""
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "id",
 									"value": ""
 								}
 							]
-						},
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"token\" : \"token\", \r\n  \"makedefault\" : \"true\"\r\n}"
 						},
 						"description": "PUT a customer"
 					},
@@ -512,6 +538,25 @@
 				{
 					"name": "PUT a default payment method onto a customer",
 					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/customers/:id/setdefaultpaymentmethod",
 							"protocol": "https",
@@ -526,35 +571,12 @@
 								":id",
 								"setdefaultpaymentmethod"
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "id",
 									"value": ""
 								}
 							]
-						},
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
 						},
 						"description": "PUT a customer"
 					},
@@ -564,67 +586,32 @@
 		},
 		{
 			"name": "Discounts",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "GET All Discounts",
 					"request": {
-						"url": "https://api.upodi.io/v2/discounts/id",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
+								"value": "bearer X"
 							},
 							{
 								"key": "Accept",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
-						"body": {},
-						"description": "Get all discount codes"
-					},
-					"response": []
-				},
-				{
-					"name": "GET Discount by id",
-					"request": {
-						"url": "https://api.upodi.io/v2/discounts/id",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "PUT apply discount to customer",
-					"request": {
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
-							"raw": "https://api.upodi.io/v2/discounts/:id/applydiscountcodecustomer",
+							"raw": "https://api.upodi.io/v2/discounts/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -634,36 +621,218 @@
 							"path": [
 								"v2",
 								"discounts",
-								":id",
-								"applydiscountcodecustomer"
+								""
+							]
+						},
+						"description": "Get all discount codes"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Discount by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/discounts/{id}/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
 							],
-							"query": [],
+							"path": [
+								"v2",
+								"discounts",
+								"{id}",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Discount codes by discountid",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/discounts/:discountid/discountcodes",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"discounts",
+								":discountid",
+								"discountcodes"
+							],
 							"variable": [
 								{
-									"key": "id",
+									"key": "discountid",
 									"value": ""
 								}
 							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Discount",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"FullName\": \"DiscountTest\",\n    \"Type\": 0,\n    \"Amount\": 0.99,\n    \"InvoiceText\": \"DiscountTest\",\n}"
 						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/discounts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"discounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Update discount",
+					"request": {
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
+								"value": "bearer X"
 							},
 							{
 								"key": "Accept",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"ID\": \"6585e904-f9c6-4759-bf79-9c0441e663bd\",\n    \"FullName\": \"DiscountTest\",\n    \"Type\": 0,\n    \"Amount\": 0.79,\n    \"InvoiceText\": \"DiscountTest\",\n}"
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/discounts",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"discounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT apply discount to customer",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\"{discount-code}\""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/discounts/:customerid/applydiscountcodecustomer",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"discounts",
+								":customerid",
+								"applydiscountcodecustomer"
+							],
+							"variable": [
+								{
+									"key": "customerid",
+									"value": ""
+								}
+							]
+						},
 						"description": "Assign a discount code to a customer"
 					},
 					"response": []
@@ -671,26 +840,46 @@
 				{
 					"name": "PUT apply discount to subscription",
 					"request": {
-						"url": "https://api.upodi.io/v2/discounts/id/applydiscountcodesubscription",
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
+								"value": "bearer X"
 							},
 							{
 								"key": "Accept",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": "\"{discount-code}\""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/discounts/:subscriptionid/applydiscountcodesubscription",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"discounts",
+								":subscriptionid",
+								"applydiscountcodesubscription"
+							],
+							"variable": [
+								{
+									"key": "subscriptionid",
+									"value": ""
+								}
+							]
+						},
 						"description": "Assign a discount code to a customer"
 					},
 					"response": []
@@ -698,26 +887,87 @@
 				{
 					"name": "PUT apply discount to subscriptioncharge",
 					"request": {
-						"url": "https://api.upodi.io/v2/discounts/id/applydiscountcodesubscriptioncharge",
 						"method": "PUT",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
+								"value": "bearer X"
 							},
 							{
 								"key": "Accept",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/discounts/id/applydiscountcodesubscriptioncharge",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"discounts",
+								"id",
+								"applydiscountcodesubscriptioncharge"
+							]
+						},
+						"description": "Assign a discount code to a customer"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT generate discount codes",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Prefix\": \"Discount\",\n    \"Amount\": 100,\n    \"Redemption\": 0,\n    \"Expirydate\": \"2019-06-25T00:00:00Z\",\n}"
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/discounts/:discountid/generatediscountcodes",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"discounts",
+								":discountid",
+								"generatediscountcodes"
+							],
+							"variable": [
+								{
+									"key": "discountid",
+									"value": ""
+								}
+							]
+						},
 						"description": "Assign a discount code to a customer"
 					},
 					"response": []
@@ -725,6 +975,25 @@
 				{
 					"name": "DELETE discount from customer",
 					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/discounts/:id/cleardiscountcodecustomer",
 							"protocol": "https",
@@ -739,7 +1008,6 @@
 								":id",
 								"cleardiscountcodecustomer"
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "id",
@@ -747,34 +1015,34 @@
 								}
 							]
 						},
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
 						"description": "Assign a discount code to a customer"
 					},
 					"response": []
 				},
 				{
-					"name": "DELETE discount from subscription",
+					"name": "DELETE discount by id",
 					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
-							"raw": "https://api.upodi.io/v2/discounts/:id/cleardiscountcodesubscription",
+							"raw": "https://api.upodi.io/v2/discounts/id",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -784,36 +1052,96 @@
 							"path": [
 								"v2",
 								"discounts",
-								":id",
-								"cleardiscountcodesubscription"
-							],
-							"query": [],
-							"variable": [
-								{
-									"key": "id",
-									"value": ""
-								}
+								"id"
 							]
 						},
+						"description": "Assign a discount code to a customer"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE discountcode by code",
+					"request": {
 						"method": "DELETE",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
+								"value": "bearer X"
 							},
 							{
 								"key": "Accept",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": "\"{discount-code}\""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/discounts/discountcode",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"discounts",
+								"discountcode"
+							]
+						},
+						"description": "Assign a discount code to a customer"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE discount from subscription",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\"{discount-code}\""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/discounts/:subscriptionid/cleardiscountcodesubscription",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"discounts",
+								":subscriptionid",
+								"cleardiscountcodesubscription"
+							],
+							"variable": [
+								{
+									"key": "subscriptionid",
+									"value": ""
+								}
+							]
+						},
 						"description": "Assign a discount code to a customer"
 					},
 					"response": []
@@ -827,8 +1155,53 @@
 				{
 					"name": "POST payment method",
 					"request": {
-						"url": "https://api.upodi.io/v2/paymentmethods/e6cf7805-2c25-44a2-8422-7ec2ec6f196d",
 						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "/* Choose only one payment method */\r\n\r\n{\r\n  \"type\" : 64,\r\n  \"makedefault\" : \"false\",\r\n  \"puretoken\" : {\r\n    \"token\" : \"0efcf5bb-3563-48bc-aa09-5b918ad7266a\",\r\n    \"paymentgateway\" : \"paylike\"\r\n  },\r\n  \"fi\" : {\r\n    \"ficustomernumber\" : \"\",\r\n  },\r\n  \"creditcard\" : {\r\n    \"cardtoken\" : \"\",\r\n  },\r\n  \"ls\" : { \r\n    \"bankregnumber\" : \"\", \r\n    \"bankaccountnumber\" : \"\",\r\n    \"cvrnumber\" : \"\"\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/paymentmethods/:customerid",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"paymentmethods",
+								":customerid"
+							],
+							"variable": [
+								{
+									"key": "customerid",
+									"value": ""
+								}
+							]
+						},
+						"description": "Replace {id} with a valid customerId"
+					},
+					"response": []
+				},
+				{
+					"name": "GET all paymentmethods",
+					"request": {
+						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
@@ -847,35 +1220,67 @@
 							"mode": "raw",
 							"raw": "{\"Type\":8,\"MakeDefault\":\"false\",\"CreditCard\":{\"cardtoken\":\"card_fahmGNyxOqjQM14Z\"}}"
 						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/paymentmethods/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"paymentmethods",
+								""
+							]
+						},
 						"description": "Replace {id} with a valid customerId"
 					},
 					"response": []
 				},
 				{
-					"name": "GET all paymentmethods",
+					"name": "GET validate paymentmethod",
 					"request": {
-						"url": "https://api.upodi.io/v2/paymentmethods/",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
+								"value": "bearer X"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\"Type\":8,\"MakeDefault\":\"false\",\"CreditCard\":{\"cardtoken\":\"card_fahmGNyxOqjQM14Z\"}}"
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/customers/:paymentmethodid/validatepaymentmethod/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"customers",
+								":paymentmethodid",
+								"validatepaymentmethod",
+								""
+							],
+							"variable": [
+								{
+									"key": "paymentmethodid",
+									"value": ""
+								}
+							]
 						},
 						"description": "Replace {id} with a valid customerId"
 					},
@@ -884,6 +1289,25 @@
 				{
 					"name": "GET payment method with id",
 					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"Type\":8,\"MakeDefault\":\"false\",\"CreditCard\":{\"cardtoken\":\"card_fahmGNyxOqjQM14Z\"}}"
+						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/paymentmethods/:id",
 							"protocol": "https",
@@ -897,35 +1321,12 @@
 								"paymentmethods",
 								":id"
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "id",
 									"value": ""
 								}
 							]
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"Type\":8,\"MakeDefault\":\"false\",\"CreditCard\":{\"cardtoken\":\"card_fahmGNyxOqjQM14Z\"}}"
 						},
 						"description": "Replace {id} with a valid customerId"
 					},
@@ -934,6 +1335,25 @@
 				{
 					"name": "GET paymentmethod of customer by id",
 					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"Type\":8,\"MakeDefault\":\"false\",\"CreditCard\":{\"cardtoken\":\"card_fahmGNyxOqjQM14Z\"}}"
+						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/paymentmethods/:customerid/bycustomer",
 							"protocol": "https",
@@ -948,7 +1368,6 @@
 								":customerid",
 								"bycustomer"
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "customerid",
@@ -956,29 +1375,101 @@
 								}
 							]
 						},
-						"method": "GET",
+						"description": "Replace {id} with a valid customerId"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT assign card token",
+					"request": {
+						"method": "PUT",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
+								"value": "bearer X"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"Type\":8,\"MakeDefault\":\"false\",\"CreditCard\":{\"cardtoken\":\"card_fahmGNyxOqjQM14Z\"}}"
+							"raw": "{\r\n  \"token\" : \"0efcf5bb-3563-48bc-aa09-5b918ad7266a\",\r\n  \"makedefault\" : \"true\"\r\n}"
 						},
-						"description": "Replace {id} with a valid customerId"
+						"url": {
+							"raw": "https://api.upodi.io/v2/customers/:customerid/assigncardtoken/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"customers",
+								":customerid",
+								"assigncardtoken",
+								""
+							],
+							"variable": [
+								{
+									"key": "customerid",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT assign card token Copy",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"0efcf5bb-3563-48bc-aa09-5b918ad7266a\"\r\n}"
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/customers/:customerid/setdefaultpaymentmethod/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"customers",
+								":customerid",
+								"setdefaultpaymentmethod",
+								""
+							],
+							"variable": [
+								{
+									"key": "customerid",
+									"value": ""
+								}
+							]
+						}
 					},
 					"response": []
 				}
@@ -991,7 +1482,6 @@
 				{
 					"name": "POST subscription FULL",
 					"request": {
-						"url": "https://api.upodi.io/v2/subscriptions",
 						"method": "POST",
 						"header": [
 							{
@@ -1010,6 +1500,19 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\"CustomerID\":\"34e2180f-da8c-41b5-9518-85f52847706e\",\"ProductPlanID\":\"f71960d2-8f5b-460b-8eab-5d3f0eee269f\",\"SwitchToPlanID\":null,\"SubscriptionNumber\":\"70RDOG8AX\",\"AutoRenew\":true,\"StartDate\":\"2017-12-05T00:00:00+01:00\",\"EndDate\":\"2018-12-05T00:00:00+01:00\",\"LifeTime\":365,\"InitialTermInterval\":5,\"InitialTermPeriod\":300,\"RenewalTermInterval\":12,\"RenewalTermPeriod\":300,\"LastRenewalDate\":null,\"CancellationDate\":null,\"ActivationDate\":null}"
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/subscriptions",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"subscriptions"
+							]
 						},
 						"description": "Creates a subscription\nNote: Productplans cannot be created through the API, create them on the web platfrom and use it`s ID here, (the id is displayed in the URL)"
 					},
@@ -1018,28 +1521,37 @@
 				{
 					"name": "POST subscription Minimum",
 					"request": {
-						"url": "https://api.upodi.io/v2/subscriptions",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Accept",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
+								"value": "bearer X"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\"CustomerID\":\"568bc3bc-6abc-44ba-b79a-0017ec86449d\",\"ProductPlanID\":\"bef65e0e-57b2-471a-82cd-32a86765f802\"}"
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/subscriptions",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"subscriptions"
+							]
 						},
 						"description": "Creates a subscription\nNote: Productplans cannot be created through the API, create them on the web platfrom and use it`s ID here, (the id is displayed in the URL)"
 					},
@@ -1048,37 +1560,6 @@
 				{
 					"name": "GET all subscriptions",
 					"request": {
-						"url": "https://api.upodi.io/v2/subscriptions",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\"CustomerID\":\"34e2180f-da8c-41b5-9518-85f52847706e\",\"ProductPlanID\":\"f71960d2-8f5b-460b-8eab-5d3f0eee269f\",\"SwitchToPlanID\":null,\"SubscriptionNumber\":\"70RDOG8AX\",\"AutoRenew\":true,\"StartDate\":\"2017-12-05T00:00:00+01:00\",\"EndDate\":\"2018-12-05T00:00:00+01:00\",\"LifeTime\":365,\"InitialTermInterval\":5,\"InitialTermPeriod\":300,\"RenewalTermInterval\":12,\"RenewalTermPeriod\":300,\"LastRenewalDate\":null,\"CancellationDate\":null,\"ActivationDate\":null}"
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "GET a subscriptions",
-					"request": {
-						"url": "https://api.upodi.io/v2/subscriptions/{id}",
 						"method": "GET",
 						"header": [
 							{
@@ -1098,15 +1579,46 @@
 							"mode": "raw",
 							"raw": "{\"CustomerID\":\"34e2180f-da8c-41b5-9518-85f52847706e\",\"ProductPlanID\":\"f71960d2-8f5b-460b-8eab-5d3f0eee269f\",\"SwitchToPlanID\":null,\"SubscriptionNumber\":\"70RDOG8AX\",\"AutoRenew\":true,\"StartDate\":\"2017-12-05T00:00:00+01:00\",\"EndDate\":\"2018-12-05T00:00:00+01:00\",\"LifeTime\":365,\"InitialTermInterval\":5,\"InitialTermPeriod\":300,\"RenewalTermInterval\":12,\"RenewalTermPeriod\":300,\"LastRenewalDate\":null,\"CancellationDate\":null,\"ActivationDate\":null}"
 						},
-						"description": "Replace {id} with a valid id"
+						"url": {
+							"raw": "https://api.upodi.io/v2/subscriptions",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"subscriptions"
+							]
+						}
 					},
 					"response": []
 				},
 				{
-					"name": "PUT activate a subscription",
+					"name": "GET a subscriptions",
 					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"CustomerID\":\"34e2180f-da8c-41b5-9518-85f52847706e\",\"ProductPlanID\":\"f71960d2-8f5b-460b-8eab-5d3f0eee269f\",\"SwitchToPlanID\":null,\"SubscriptionNumber\":\"70RDOG8AX\",\"AutoRenew\":true,\"StartDate\":\"2017-12-05T00:00:00+01:00\",\"EndDate\":\"2018-12-05T00:00:00+01:00\",\"LifeTime\":365,\"InitialTermInterval\":5,\"InitialTermPeriod\":300,\"RenewalTermInterval\":12,\"RenewalTermPeriod\":300,\"LastRenewalDate\":null,\"CancellationDate\":null,\"ActivationDate\":null}"
+						},
 						"url": {
-							"raw": "https://api.upodi.io/v2/subscriptions/:id/activate",
+							"raw": "https://api.upodi.io/v2/subscriptions/{id}",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -1116,17 +1628,16 @@
 							"path": [
 								"v2",
 								"subscriptions",
-								":id",
-								"activate"
-							],
-							"query": [],
-							"variable": [
-								{
-									"key": "id",
-									"value": ""
-								}
+								"{id}"
 							]
 						},
+						"description": "Replace {id} with a valid id"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT activate a subscription",
+					"request": {
 						"method": "PUT",
 						"header": [
 							{
@@ -1146,6 +1657,27 @@
 							"mode": "raw",
 							"raw": ""
 						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/subscriptions/:id/activate",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"subscriptions",
+								":id",
+								"activate"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
 						"description": "Replace {id} with a valid id"
 					},
 					"response": []
@@ -1153,6 +1685,25 @@
 				{
 					"name": "PUT hold a subscription",
 					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/subscriptions/:id/hold/",
 							"protocol": "https",
@@ -1168,35 +1719,12 @@
 								"hold",
 								""
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "id",
 									"value": ""
 								}
 							]
-						},
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
 						},
 						"description": "Replace {id} with a valid id"
 					},
@@ -1205,6 +1733,25 @@
 				{
 					"name": "PUT resume a subscription",
 					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/subscriptions/:id/resume/",
 							"protocol": "https",
@@ -1220,35 +1767,12 @@
 								"resume",
 								""
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "id",
 									"value": ""
 								}
 							]
-						},
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
 						},
 						"description": "Replace {id} with a valid id"
 					},
@@ -1257,6 +1781,25 @@
 				{
 					"name": "PUT expire a subscription",
 					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/subscriptions/:id/expire",
 							"protocol": "https",
@@ -1271,7 +1814,6 @@
 								":id",
 								"expire"
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "id",
@@ -1279,6 +1821,13 @@
 								}
 							]
 						},
+						"description": "Replace {id} with a valid id"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT cancel a subscription",
+					"request": {
 						"method": "PUT",
 						"header": [
 							{
@@ -1298,13 +1847,6 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "Replace {id} with a valid id"
-					},
-					"response": []
-				},
-				{
-					"name": "PUT cancel a subscription",
-					"request": {
 						"url": {
 							"raw": "https://api.upodi.io/v2/subscriptions/:id/cancel",
 							"protocol": "https",
@@ -1319,7 +1861,6 @@
 								":id",
 								"cancel"
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "id",
@@ -1327,6 +1868,13 @@
 								}
 							]
 						},
+						"description": "Replace {id} with a valid id"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT switch subscription plan",
+					"request": {
 						"method": "PUT",
 						"header": [
 							{
@@ -1344,15 +1892,8 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "Productplan ID"
 						},
-						"description": "Replace {id} with a valid id"
-					},
-					"response": []
-				},
-				{
-					"name": "PUT switch subscription plan",
-					"request": {
 						"url": {
 							"raw": "https://api.upodi.io/v2/subscriptions/:id/switchplan/",
 							"protocol": "https",
@@ -1368,35 +1909,12 @@
 								"switchplan",
 								""
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "id",
 									"value": ""
 								}
 							]
-						},
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "Productplan ID"
 						},
 						"description": "Replace {id} with a valid id"
 					},
@@ -1411,26 +1929,38 @@
 				{
 					"name": "GET all subscriptioncharges",
 					"request": {
-						"url": "https://api.upodi.io/v2/subscriptionCharges",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
+								"value": "bearer X"
 							},
 							{
 								"key": "Accept",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/subscriptionCharges",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"subscriptionCharges"
+							]
+						},
 						"description": "Get all subscriptioncharges"
 					},
 					"response": []
@@ -1438,26 +1968,38 @@
 				{
 					"name": "GET subscriptioncharge by id",
 					"request": {
-						"url": "https://api.upodi.io/v2/subscriptionCharges",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
+								"value": "bearer X"
 							},
 							{
 								"key": "Accept",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/subscriptionCharges",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"subscriptionCharges"
+							]
+						},
 						"description": "Get all subscriptioncharges"
 					},
 					"response": []
@@ -1465,6 +2007,25 @@
 				{
 					"name": "PUT a new amount onto a subscription charge",
 					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/subscriptionCharges/:id/setamount/",
 							"protocol": "https",
@@ -1480,35 +2041,12 @@
 								"setamount",
 								""
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "id",
 									"value": ""
 								}
 							]
-						},
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
 						},
 						"description": "Get all subscriptioncharges"
 					},
@@ -1517,6 +2055,25 @@
 				{
 					"name": "PUT hold a subscriptioncharge",
 					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/subscriptionCharges/:id/hold/",
 							"protocol": "https",
@@ -1532,35 +2089,12 @@
 								"hold",
 								""
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "id",
 									"value": ""
 								}
 							]
-						},
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
 						},
 						"description": "Get all subscriptioncharges"
 					},
@@ -1570,32 +2104,43 @@
 		},
 		{
 			"name": "Time",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "GET time",
 					"request": {
-						"url": "https://api.upodi.io/v2/time",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
+								"value": "bearer X"
 							},
 							{
 								"key": "Accept",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
-						"body": {},
-						"description": ""
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/time",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"time"
+							]
+						}
 					},
 					"response": []
 				}
@@ -1603,31 +2148,44 @@
 		},
 		{
 			"name": "Invoice",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "GET all invoices",
 					"request": {
-						"url": "https://api.upodi.io/v2/invoices/",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
+								"value": "bearer X"
 							},
 							{
 								"key": "Accept",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/invoices/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"invoices",
+								""
+							]
+						},
 						"description": "Get all discount codes"
 					},
 					"response": []
@@ -1635,6 +2193,25 @@
 				{
 					"name": "GET invoice by id",
 					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/invoices/:id",
 							"protocol": "https",
@@ -1648,7 +2225,6 @@
 								"invoices",
 								":id"
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "id",
@@ -1656,25 +2232,6 @@
 								}
 							]
 						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
 						"description": "Get all discount codes"
 					},
 					"response": []
@@ -1682,6 +2239,25 @@
 				{
 					"name": "GET invoice by invoicenumber",
 					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/invoices/:invoicenumber/number/",
 							"protocol": "https",
@@ -1697,7 +2273,6 @@
 								"number",
 								""
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "invoicenumber",
@@ -1705,25 +2280,6 @@
 								}
 							]
 						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
 						"description": "Get all discount codes"
 					},
 					"response": []
@@ -1731,6 +2287,25 @@
 				{
 					"name": "PUT mark invoice as paid",
 					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/invoices/:id/markpaid/",
 							"protocol": "https",
@@ -1746,7 +2321,6 @@
 								"markpaid",
 								""
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "id",
@@ -1754,25 +2328,6 @@
 								}
 							]
 						},
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
 						"description": "Get all discount codes"
 					},
 					"response": []
@@ -1780,6 +2335,25 @@
 				{
 					"name": "PUT cancel invoice",
 					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/invoices/:id/cancel/",
 							"protocol": "https",
@@ -1795,7 +2369,6 @@
 								"cancel",
 								""
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "id",
@@ -1803,25 +2376,6 @@
 								}
 							]
 						},
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
 						"description": "Get all discount codes"
 					},
 					"response": []
@@ -1829,6 +2383,25 @@
 				{
 					"name": "PUT recharge invoice",
 					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/invoices/:id/recharge/",
 							"protocol": "https",
@@ -1844,7 +2417,6 @@
 								"recharge",
 								""
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "id",
@@ -1852,25 +2424,6 @@
 								}
 							]
 						},
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
 						"description": "Get all discount codes"
 					},
 					"response": []
@@ -1884,26 +2437,38 @@
 				{
 					"name": "GET all product plans",
 					"request": {
-						"url": "https://api.upodi.io/v2/productplans",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "bearer x",
-								"description": ""
+								"value": "bearer x"
 							},
 							{
 								"key": "Accept",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/productplans",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"productplans"
+							]
+						},
 						"description": "Gets all product plans"
 					},
 					"response": []
@@ -1911,26 +2476,39 @@
 				{
 					"name": "GET product plan from ID",
 					"request": {
-						"url": "https://api.upodi.io/v2/productplans/id",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
+								"value": "bearer X"
 							},
 							{
 								"key": "Accept",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/productplans/id",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"productplans",
+								"id"
+							]
+						},
 						"description": "Gets a specific product plan from the product plan id"
 					},
 					"response": []
@@ -1938,6 +2516,25 @@
 				{
 					"name": "PUT duplicate plan by id",
 					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/productplans/:id/duplicate",
 							"protocol": "https",
@@ -1952,7 +2549,6 @@
 								":id",
 								"duplicate"
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "id",
@@ -1960,25 +2556,6 @@
 								}
 							]
 						},
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
 						"description": "Gets a specific product plan from the product plan id"
 					},
 					"response": []
@@ -1992,26 +2569,38 @@
 				{
 					"name": "GET all transactions",
 					"request": {
-						"url": "https://api.upodi.io/v2/transactions",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "bearer x",
-								"description": ""
+								"value": "bearer x"
 							},
 							{
 								"key": "Accept",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/transactions",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"transactions"
+							]
+						},
 						"description": "Gets all product plans"
 					},
 					"response": []
@@ -2019,6 +2608,25 @@
 				{
 					"name": "Get transaction by id",
 					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/transactions/:id",
 							"protocol": "https",
@@ -2032,7 +2640,6 @@
 								"transactions",
 								":id"
 							],
-							"query": [],
 							"variable": [
 								{
 									"key": "id",
@@ -2040,30 +2647,43 @@
 								}
 							]
 						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "bearer X",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
 						"description": "Gets a specific product plan from the product plan id"
 					},
 					"response": []
 				}
 			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "381d123a-4b6f-46a5-8809-dd9f9607c8f8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "4cd4a782-e22b-49bb-bf1e-37f3c3e93d72",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }
