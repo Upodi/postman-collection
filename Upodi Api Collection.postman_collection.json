@@ -3077,16 +3077,6 @@
 			"description": "API calls for product plans\n"
 		}
 	],
-	"auth": {
-		"type": "bearer",
-		"bearer": [
-			{
-				"key": "token",
-				"value": "ODAxNDc0MTAtYTU3MC00MThkLTkwNGMtN2QzODExYTIyMWUz",
-				"type": "string"
-			}
-		]
-	},
 	"event": [
 		{
 			"listen": "prerequest",
