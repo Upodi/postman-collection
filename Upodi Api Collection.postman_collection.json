@@ -8,7 +8,6 @@
 	"item": [
 		{
 			"name": "Customers",
-			"description": "Calls related to customers",
 			"item": [
 				{
 					"name": "GET all customers",
@@ -346,7 +345,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"AccountNumber\":\"accountNr7000\",\"CompanyName\":\"K7VV3EKEAB73TOXC8KWHYSDU7PQSTY8QJQ3TLYF56N\",\"CompanyVAT\":\"5YBI0XJPKXXF14BXOY2VLCQUDV\",\"FullName\":\"1KF0LKBH56\",\"RefKey\":\"refKey1000\",\"PrimaryEmail\":\"D1G3IRFFSSFF6M@0XF0H8.MC\",\"CurrencyCode\":\"EUR\",\"AutoBill\":true,\"PaymentMethod\":null,\"HomePhone\":\"X82TPRJOTHS4OWOBUM0DS6J\",\"BusinessPhone\":\"LBEKUIGPDOVSNWDB61NEM5JT\",\"MobilePhone\":\"FOUW861YMHNN93KAD09\",\"AddressLine1\":\"6Y8IZG\",\"AddressLine2\":\"SECQ2V8O4W3FR44AO0Y77DEIEJRPRPL62GITJ\",\"City\":\"U1APPOKVRHBYUSBJ2OA4LTDS7PK6NLVK0WF66SX\",\"PostalCode\":\"7S1KO253\",\"Country\":\"SN3TPPBYSRADOIGW177NENJ1K6313EETRB4\",\"County\":\"11KHDHNBXWTJVYW58Q0FDCITWK5OMQWNOI4AW\",\"State\":\"J79IEYMTGFRJVAKZ3ZS1V2M9YG9G5M\",\"ParentID\":null,\"BillToParent\":false,\"Note\":\"YJJH5G7 VHCE19D8XC1QFT7FSV W 1H06M7AO6TU 2 WU0ZCWLPEG 0FOD2JGLA7 PLPCDU3WGRPVKX49  ZLCT8Z2ZKEJNZ2DWEOJAT4YUASKWDT NJMNV99Q3MRJYN650R1TQ09T80VTQOFV4H8DNPU0I S0CU HH0X\",\"PaymentTerm\":0,\"Currency\":null,\"Subscriptions\":[],\"Invoices\":[],\"SubscriptionCharges\":[],\"Transactions\":[],\"Parent\":null,\"Contacts\":[],\"Activities\":[],\"CreatedBy\":\"00000000-0000-0000-0001-000000000000\",\"ModifiedBy\":\"00000000-0000-0000-0001-000000000000\",\"CreatedByUser\":null,\"ModifiedByUser\":null,\"ID\":\"1ecf6ef8-b813-4032-af20-cb173ec67a84\",\"CreatedDate\":\"2017-12-05T10:45:38.421948Z\",\"ModifiedDate\":\"2017-12-05T10:45:38.421948Z\"}"
+							"raw": "{\n\t\"AccountNumber\":\"uyrrd\",\n\t\"CompanyName\":\"\",\n\t\"CompanyVAT\":\"\",\n\t\"FullName\":\"1KF0LKBH56\",\n\t\"RefKey\":\"\",\n\t\"PrimaryEmail\":\"\",\n\t\"CurrencyCode\":\"DKK\",\n\t\"AutoBill\":true,\n\t\"PaymentMethod\":null,\n\t\"HomePhone\":\"\",\n\t\"BusinessPhone\":\"\",\n\t\"MobilePhone\":\"\",\n\t\"AddressLine1\":\"\",\n\t\"AddressLine2\":\"\",\n\t\"City\":\"\",\n\t\"PostalCode\":\"\",\n\t\"Country\":\"\",\n\t\"County\":\"\",\n\t\"State\":\"\",\n\t\"ParentID\":null,\n\t\"BillToParent\":false,\n\t\"Note\":\"\",\n\t\"PaymentTerm\":8,\n\t\"Currency\":null,\n\t\"Parent\":null,\n\t\"Contacts\":[],\n}"
 						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/customers",
@@ -468,7 +467,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\n\t\"ID\":\"1ecf6ef8-b813-4032-af20-cb173ec67a84\",\n\t\"AccountNumber\":\"\",\n\t\"CompanyName\":\"\",\n\t\"CompanyVAT\":\"\",\n\t\"FullName\":\"1KF0LKBH56\",\n\t\"RefKey\":\"\",\n\t\"PrimaryEmail\":\"\",\n\t\"CurrencyCode\":\"DKK\",\n\t\"AutoBill\":true,\n\t\"PaymentMethod\":null,\n\t\"HomePhone\":\"\",\n\t\"BusinessPhone\":\"\",\n\t\"MobilePhone\":\"\",\n\t\"AddressLine1\":\"\",\n\t\"AddressLine2\":\"\",\n\t\"City\":\"\",\n\t\"PostalCode\":\"\",\n\t\"Country\":\"\",\n\t\"County\":\"\",\n\t\"State\":\"\",\n\t\"ParentID\":null,\n\t\"BillToParent\":false,\n\t\"Note\":\"\",\n\t\"PaymentTerm\":8,\n\t\"Currency\":null,\n\t\"Parent\":null,\n\t\"Contacts\":[],\n}"
 						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/customers",
@@ -582,11 +581,318 @@
 					},
 					"response": []
 				}
+			],
+			"description": "Calls related to customers"
+		},
+		{
+			"name": "Contacts",
+			"item": [
+				{
+					"name": "GET all contacts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/contacts/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"contacts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET a contact through id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/contacts/:id",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"contacts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Replace {id} in call with a valid id"
+					},
+					"response": []
+				},
+				{
+					"name": "Post a contact Full",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"CustomerId\":\"3c6be5d9-786a-41a2-b108-d57496366092\",\n\t\"ContactType\": 8,\n\t\"FullName\":\"Test contact\",\n\t\"RefKey\":\"\",\n\t\"PrimaryEmail\":\"\",\n\t\"HomePhone\":\"\",\n\t\"BusinessPhone\":\"\",\n\t\"MobilePhone\":\"\",\n\t\"AddressLine1\":\"\",\n\t\"AddressLine2\":\"\",\n\t\"City\":\"\",\n\t\"PostalCode\":\"\",\n\t\"Country\":\"\",\n\t\"County\":\"\",\n\t\"State\":\"\",\n\t\"Note\":\"\",\n}"
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/contacts/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"contacts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE a contact",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/contacts/:id",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"contacts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Replace {id} in call with a valid id"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT and update a contact",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Id\":\"3c6be5d9-786a-41a2-b108-d57496675092\",\n\t\"CustomerId\":\"3c6be5d9-786a-41a2-b108-d57496366092\",\n\t\"ContactType\": 8,\n\t\"FullName\":\"Test contact\",\n\t\"RefKey\":\"\",\n\t\"PrimaryEmail\":\"\",\n\t\"HomePhone\":\"\",\n\t\"BusinessPhone\":\"\",\n\t\"MobilePhone\":\"\",\n\t\"AddressLine1\":\"\",\n\t\"AddressLine2\":\"\",\n\t\"City\":\"\",\n\t\"PostalCode\":\"\",\n\t\"Country\":\"\",\n\t\"County\":\"\",\n\t\"State\":\"\",\n\t\"Note\":\"\",\n}"
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/customers",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"customers"
+							]
+						},
+						"description": "PUT a customer"
+					},
+					"response": []
+				},
+				{
+					"name": "GET a list of contacts of Customer",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/contacts/:id",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"contacts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Replace {id} in call with a valid id"
+					},
+					"response": []
+				},
+				{
+					"name": "GET a list of contacts of Refkey",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/contacts/:refkey/refkey",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"contacts",
+								":refkey",
+								"refkey"
+							],
+							"variable": [
+								{
+									"key": "refkey",
+									"value": ""
+								}
+							]
+						},
+						"description": "Replace {id} in call with a valid id"
+					},
+					"response": []
+				}
 			]
 		},
 		{
 			"name": "Discounts",
-			"description": null,
 			"item": [
 				{
 					"name": "GET All Discounts",
@@ -651,7 +957,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://api.upodi.io/v2/discounts/{id}/",
+							"raw": "https://api.upodi.io/v2/discounts/:id/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -661,8 +967,14 @@
 							"path": [
 								"v2",
 								"discounts",
-								"{id}",
+								":id",
 								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
 							]
 						}
 					},
@@ -907,7 +1219,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://api.upodi.io/v2/discounts/id/applydiscountcodesubscriptioncharge",
+							"raw": "https://api.upodi.io/v2/discounts/:id/applydiscountcodesubscriptioncharge",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -917,8 +1229,14 @@
 							"path": [
 								"v2",
 								"discounts",
-								"id",
+								":id",
 								"applydiscountcodesubscriptioncharge"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
 							]
 						},
 						"description": "Assign a discount code to a customer"
@@ -1042,7 +1360,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://api.upodi.io/v2/discounts/id",
+							"raw": "https://api.upodi.io/v2/discounts/:id",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -1052,7 +1370,13 @@
 							"path": [
 								"v2",
 								"discounts",
-								"id"
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
 							]
 						},
 						"description": "Assign a discount code to a customer"
@@ -1150,7 +1474,6 @@
 		},
 		{
 			"name": "PaymentMethods",
-			"description": "Contains calls related to payment methods",
 			"item": [
 				{
 					"name": "POST payment method",
@@ -1473,11 +1796,11 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "Contains calls related to payment methods"
 		},
 		{
 			"name": "Subscription",
-			"description": "Calls related to subscriptions",
 			"item": [
 				{
 					"name": "POST subscription FULL",
@@ -1679,6 +2002,53 @@
 							]
 						},
 						"description": "Replace {id} with a valid id"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT set amount on subscriptioncharges",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"quantity\":\"\",\n\t\"productplanchargeid\":\"\",\n\t\"all\":\"true\"\n}"
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/subscriptions/:id/setamount",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"subscriptions",
+								":id",
+								"setamount"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "If all is true it will set amount on all subscriptioncharges regardless of productplanchargeid. If false subscriptioncharges of productplanchargeid is updated."
 					},
 					"response": []
 				},
@@ -1920,11 +2290,11 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "Calls related to subscriptions"
 		},
 		{
 			"name": "Subscriptioncharge",
-			"description": "Commands for subscriptioncharges\n",
 			"item": [
 				{
 					"name": "GET all subscriptioncharges",
@@ -2024,7 +2394,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "1"
 						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/subscriptionCharges/:id/setamount/",
@@ -2039,6 +2409,54 @@
 								"subscriptionCharges",
 								":id",
 								"setamount",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Get all subscriptioncharges"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT toggle a subscriptioncharge on or off",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/subscriptionCharges/:id/togglecharge/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"subscriptionCharges",
+								":id",
+								"togglecharge",
 								""
 							],
 							"variable": [
@@ -2100,11 +2518,11 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "Commands for subscriptioncharges\n"
 		},
 		{
 			"name": "Time",
-			"description": null,
 			"item": [
 				{
 					"name": "GET time",
@@ -2148,7 +2566,6 @@
 		},
 		{
 			"name": "Invoice",
-			"description": null,
 			"item": [
 				{
 					"name": "GET all invoices",
@@ -2432,7 +2849,6 @@
 		},
 		{
 			"name": "Product plan",
-			"description": "API calls for product plans\n",
 			"item": [
 				{
 					"name": "GET all product plans",
@@ -2496,7 +2912,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://api.upodi.io/v2/productplans/id",
+							"raw": "https://api.upodi.io/v2/productplans/:id",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -2506,7 +2922,13 @@
 							"path": [
 								"v2",
 								"productplans",
-								"id"
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
 							]
 						},
 						"description": "Gets a specific product plan from the product plan id"
@@ -2560,11 +2982,11 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "API calls for product plans\n"
 		},
 		{
 			"name": "Transactions",
-			"description": "API calls for product plans\n",
 			"item": [
 				{
 					"name": "GET all transactions",
@@ -2651,7 +3073,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "API calls for product plans\n"
 		}
 	],
 	"auth": {
@@ -2659,7 +3082,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "",
+				"value": "ODAxNDc0MTAtYTU3MC00MThkLTkwNGMtN2QzODExYTIyMWUz",
 				"type": "string"
 			}
 		]
