@@ -917,7 +917,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://api.upodi.io/v2/discounts/",
+							"raw": "https://api.upodi.io/v2/discounts/?$expand=DiscountConsumers",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -928,6 +928,12 @@
 								"v2",
 								"discounts",
 								""
+							],
+							"query": [
+								{
+									"key": "$expand",
+									"value": "DiscountConsumers"
+								}
 							]
 						},
 						"description": "Get all discount codes"
@@ -1822,7 +1828,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"CustomerID\":\"34e2180f-da8c-41b5-9518-85f52847706e\",\"ProductPlanID\":\"f71960d2-8f5b-460b-8eab-5d3f0eee269f\",\"SwitchToPlanID\":null,\"SubscriptionNumber\":\"70RDOG8AX\",\"AutoRenew\":true,\"StartDate\":\"2017-12-05T00:00:00+01:00\",\"EndDate\":\"2018-12-05T00:00:00+01:00\",\"LifeTime\":365,\"InitialTermInterval\":5,\"InitialTermPeriod\":300,\"RenewalTermInterval\":12,\"RenewalTermPeriod\":300,\"LastRenewalDate\":null,\"CancellationDate\":null,\"ActivationDate\":null}"
+							"raw": "{\n\t\"CustomerID\":\"3c6be5d9-786a-41a2-b108-d57496366092\",\n\t\"ProductPlanID\":\"bf69a64b-9c20-415b-bce4-be4653500f49\",\n\t\"SwitchToPlanID\":null,\n\t\"SubscriptionNumber\":\"70RDytfy8AX\",\n\t\"AutoRenew\":true,\n\t\"StartDate\":\"2018-08-30T00:00:00+01:00\",\n\t\"EndDate\":\"2018-12-05T00:00:00+01:00\",\n\t\"Status\":1,\n\t\"LifeTime\":365,\n\t\"InitialTermInterval\":5,\n\t\"InitialTermPeriod\":300,\n\t\"RenewalTermInterval\":12,\n\t\"RenewalTermPeriod\":300,\n}"
 						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/subscriptions",
@@ -2025,7 +2031,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"quantity\":\"\",\n\t\"productplanchargeid\":\"\",\n\t\"all\":\"true\"\n}"
+							"raw": "{\n\t\"quantity\":\"\",\n\t\"productplanchargeid\":\"\",\n\t\"all\":\"true\",\n\t\"prorate\":\"true\"\n}"
 						},
 						"url": {
 							"raw": "https://api.upodi.io/v2/subscriptions/:id/setamount",
@@ -2590,7 +2596,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://api.upodi.io/v2/invoices/",
+							"raw": "https://api.upodi.io/v2/invoices/?$filter=CustomerID eq guid'27ed0f9e-51c2-412c-8c8d-29fb6256bbce' and CreatedDate gt DateTime'2018-08-14T06:55:32'\n \n",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -2601,6 +2607,12 @@
 								"v2",
 								"invoices",
 								""
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "CustomerID eq guid'27ed0f9e-51c2-412c-8c8d-29fb6256bbce' and CreatedDate gt DateTime'2018-08-14T06:55:32'\n \n"
+								}
 							]
 						},
 						"description": "Get all discount codes"
@@ -2650,6 +2662,52 @@
 							]
 						},
 						"description": "Get all discount codes"
+					},
+					"response": []
+				},
+				{
+					"name": "GET invoice as PDF",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer X"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.upodi.io/v2/invoices/:id/getpdfwithid",
+							"protocol": "https",
+							"host": [
+								"api",
+								"upodi",
+								"io"
+							],
+							"path": [
+								"v2",
+								"invoices",
+								":id",
+								"getpdfwithid"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -2857,7 +2915,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "bearer x"
+								"value": "bearer X"
 							},
 							{
 								"key": "Accept",
@@ -3077,6 +3135,16 @@
 			"description": "API calls for product plans\n"
 		}
 	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "",
+				"type": "string"
+			}
+		]
+	},
 	"event": [
 		{
 			"listen": "prerequest",
