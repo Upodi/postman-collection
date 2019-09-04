@@ -2869,7 +2869,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"Amount\": 500,\n\t\"Prorate\": false,\n\t\"entryDate\": \"12-12-2020\"\n}"
+							"raw": "{\n\t\"Quantity\": 500,\n\t\"Prorate\": false,\n\t\"entryDate\": \"12-12-2020\"\n}"
 						},
 						"url": {
 							"raw": "https://api.upodi.io/v3/subscriptioncharges/{id}/setamount",
